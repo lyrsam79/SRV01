@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/superslides.css" rel="stylesheet" />
+    <link href="~/Content/slick.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/themes/cyan-theme.css" rel="stylesheet" />
+    <link href="~/Content/cssFamilyRaleway.css" rel="stylesheet" />
+    <link href="~/Content/cssFamilyOpenSans.css" rel="stylesheet" />
+    @*<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>*@
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <!-- End Preloader -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+    <!-- start navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">PHELL <span>Company</span></a>
+                <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navbar_area">
+                <ul class="nav navbar-nav navbar-right custom_nav">
+                    <li class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Link one</a></li>
+                            <li><a href="#">Link Two</a></li>
+                            <li><a href="#">Link Three</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page.html">Page</a></li>
+                    <li><a href="blog-archive.html">Blog</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- End navbar -->
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <div class="">
+        @RenderBody()
+        <hr />
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="footer_top">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+
+                                        <div class="single_footer_top pull-right">
+
+                                            <ul class="social_nav">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                    <p style="color:white; display:inline-block; word-wrap:normal"> &copy; <span>2010 </span> - Phell Company</p></div>
+                        
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/js/jquery.easing.1.3.js")
+    @Scripts.Render("~/Scripts/js/jquery.superslides.min.js")
+
+    @Scripts.Render("~/Scripts/js/slick.min.js")
+    @Scripts.Render("~/Scripts/js/wow.min.js")
+    @Scripts.Render("~/Scripts/js/custom.js")
+    @Scripts.Render("~/Scripts/js/jquery.ui.map.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
