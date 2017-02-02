@@ -11,7 +11,7 @@ namespace WPHELL.Controllers
         public ActionResult Index()
         {
             return View("Index");
-            if (false) { return View("Index"); }
+            
            
         }
 
